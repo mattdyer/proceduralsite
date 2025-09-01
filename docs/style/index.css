@@ -1,0 +1,29 @@
+
+@keyframes pictures {
+  0% {
+  	top: 200px;
+  	left: calc(var(--index) * 310px);
+  }
+  25%{
+  	top: 200px;
+  	left: calc(var(--index) * 50px);
+  }
+  50% {
+  	top: calc((var(--index) * 200px) + 200px);
+  	left: calc(var(--index) * 50px);	
+  }
+  100% {
+  	top: 200px;
+  	left: calc(var(--index) * 310px);
+  }
+}
+
+.pictures img{
+	position: absolute;
+	animation-name: pictures;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	opacity: calc((100 - (2 * var(--index))) * .01);
+	width: 300px;
+	border-radius: 5px;
+}

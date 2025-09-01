@@ -1,0 +1,40 @@
+
+@keyframes pictures {
+  0% {
+  	width: 50px;
+  }
+  50% {
+  	width: 200px;
+  }
+  100% {
+  	width: 50px;
+  }
+}
+
+.pictures{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
+}
+
+.pictures div{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.pictures img{
+	animation-name: pictures;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	opacity: calc((100 - (2 * var(--index))) * .01);
+	border-radius: 5px;
+}
+
+.words{
+  font-family: Arial, Helvetica, sans serif;
+}
+
+.words div{
+  padding: 10px;
+}
